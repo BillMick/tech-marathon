@@ -12,5 +12,11 @@ print (str)          # Prints complete string
 print (str[0])       # Prints first character of the string
 print (str[2:5])     # Prints characters starting from 3rd to 5th
 print (str[2:])      # Prints string starting from 3rd character
-print (str * 2)      # Prints string two times
+print (str * 5)      # Prints string two times
 print (str + "TEST") # Prints concatenated string
+
+# # Python List Data Type
+# An item in the list may be of any data type. It means that a list object 
+# can also be an item in another list. In that case, it becomes a nested list.
+nested_list = [['One', 'Two', 'Three'], [1,2,3], [1.0, 2.0, 3.0]]
+print(f"nested_list = {nested_list}")
