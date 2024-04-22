@@ -36,3 +36,21 @@ print(list + tinylist) # Prints concatenated lists
 # separated by comma without any enclosing symbols are treated as a tuple by default.
 test = 15, 17, "a"
 print(f"test_type = {type(test)}")
+
+# List are mutable and Tuple are not (Tuples can be thought of as read-only lists).
+
+# # Python Range Data Type
+# A Python range is an immutable sequence of numbers which is typically used to iterate
+# through a specific number of items.
+# range(start, stop, step)
+
+# # Python Binary Sequence Data Types
+# Python provides three different ways to represent binary data. They are as follows −
+# bytes, bytearray, memoryview
+
+# # Python Bytes Data Type
+# We can create bytes in Python using the built-in bytes() function or by prefixing a sequence of numbers with b.
+b1 = bytes([65, 66, 67, 68, 69])  
+print(b1, type(b1))  
+b2 = b'Hello'
+print(b2, type(b2))
