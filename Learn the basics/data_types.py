@@ -54,3 +54,14 @@ b1 = bytes([65, 66, 67, 68, 69])
 print(b1, type(b1))  
 b2 = b'Hello'
 print(b2, type(b2))
+
+# # Python Bytearray Data Type
+# The bytearray data type in Python is quite similar to the bytes data type, but with
+# one key difference: it is mutable, meaning you can modify the values stored in it after it is created.
+# You can create a bytearray using various methods, including by passing an iterable of integers representing
+# byte values, by encoding a string, or by converting an existing bytes or bytearray object.
+value1 = bytearray([72, 101, 108, 108, 111])  
+print(value1, type(value1))
+value2 = bytearray("Hello", 'utf-8')  
+print(value2, type(value2))
+
