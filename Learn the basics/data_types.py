@@ -138,4 +138,4 @@ print (a, b, c)
 print("Conversion to string")
 a, b, c = str(1), str(2.2), str("3.3") # c will be "3.3"# b will be "2.2" # a will be "1" 
 print (a, b, c)
-str()
+
