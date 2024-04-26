@@ -111,3 +111,31 @@ print(f"DocString : {evenOdd.__doc__}")
 # Inner functions are used so that they can be protected from everything happening 
 # outside the function.
 
+# # Anonymous Functions in Python
+# In Python, an anonymous function means that a function is without a name.
+# As we already know the def keyword is used to define the normal functions and the 
+# lambda keyword is used to create anonymous functions.
+def cube(x): return x*x*x
+cube_v2 = lambda x : x**3
+print(cube(7))
+print(cube_v2(7))
+
+# # Pass by Reference and Pass by Value
+# One important thing to note is, in Python every variable name is a reference.
+# When we pass a variable to a function Python, a new reference to the object is created. 
+def myFun(x):
+    x[0] = 20
+lst = [10, 11, 12, 13, 14, 15]
+myFun(lst)
+print(lst)
+
+# When we pass a reference and change the received reference to something else, the connection 
+# between the passed and received parameters is broken. For example, consider the below program as follows:
+def myFun(x):
+    # After below line link of x with previous
+    # object gets broken. A new object is assigned
+    # to x.
+    x = [20, 30, 40]
+lst = [10, 11, 12, 13, 14, 15]
+myFun(lst)
+print(lst)
