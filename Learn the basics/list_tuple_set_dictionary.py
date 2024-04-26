@@ -45,39 +45,60 @@ print("Dictionary", d)
 # over in practice.
 # You can use the timeit module to see which is faster for your situation.
 # Iterating #
-def iter_test(iterable):
-    for i in iterable:
-        pass
-from timeit import timeit
-for_set = timeit(
-    "iter_test(iterable)",
-    setup="from __main__ import iter_test; iterable = set(range(10000))",
-    number=100000)
-for_list = timeit(
-    "iter_test(iterable)",
-    setup="from __main__ import iter_test; iterable = list(range(10000))",
-    number=100000)
-for_tuple = timeit(
-    "iter_test(iterable)",
-    setup="from __main__ import iter_test; iterable = tuple(range(10000))",
-    number=100000)
-print("### Iterating ###", f"for_set = {for_set}", f"for_list = {for_list}", f"for_tuple = {for_tuple}", sep = "\n")
+#####################################################################################################################
+# def iter_test(iterable):
+#     for i in iterable:
+#         pass
+# from timeit import timeit
+# for_set = timeit(
+#     "iter_test(iterable)",
+#     setup="from __main__ import iter_test; iterable = set(range(10000))",
+#     number=100000)
+# for_list = timeit(
+#     "iter_test(iterable)",
+#     setup="from __main__ import iter_test; iterable = list(range(10000))",
+#     number=100000)
+# for_tuple = timeit(
+#     "iter_test(iterable)",
+#     setup="from __main__ import iter_test; iterable = tuple(range(10000))",
+#     number=100000)
+# print("### Iterating ###", f"for_set = {for_set}", f"for_list = {for_list}", f"for_tuple = {for_tuple}", sep = "\n")
+#####################################################################################################################
 
 # Determine if an object is present #
-def in_test(iterable):
-    for i in range(1000):
-        if i in iterable:
-            pass
-for_set = timeit(
-    "in_test(iterable)",
-    setup="from __main__ import in_test; iterable = set(range(1000))",
-    number=10000)
-for_list = timeit(
-    "in_test(iterable)",
-    setup="from __main__ import in_test; iterable = list(range(1000))",
-    number=10000)
-for_tuple = timeit(
-    "in_test(iterable)",
-    setup="from __main__ import in_test; iterable = tuple(range(1000))",
-    number=10000)
-print("### Iterating ###", f"for_set = {for_set}", f"for_list = {for_list}", f"for_tuple = {for_tuple}", sep = "\n")
+#####################################################################################################################
+# def in_test(iterable):
+#     for i in range(1000):
+#         if i in iterable:
+#             pass
+# for_set = timeit(
+#     "in_test(iterable)",
+#     setup="from __main__ import in_test; iterable = set(range(1000))",
+#     number=10000)
+# for_list = timeit(
+#     "in_test(iterable)",
+#     setup="from __main__ import in_test; iterable = list(range(1000))",
+#     number=10000)
+# for_tuple = timeit(
+#     "in_test(iterable)",
+#     setup="from __main__ import in_test; iterable = tuple(range(1000))",
+#     number=10000)
+# print("### Iterating ###", f"for_set = {for_set}", f"for_list = {for_list}", f"for_tuple = {for_tuple}", sep = "\n")
+#####################################################################################################################
+
+# # Print list in column format
+#Import the Pandas framework, defined as pd
+import pandas as pd
+ 
+#Define our color variable as a list
+color = ['blue','green','red','yellow']
+#Define our fruit variable as a list
+fruit = ['blueberry','apple','cherry','banana']
+ 
+#Define the df variable as formatted columns for color and fruit
+df=pd.DataFrame(columns=['color', 'fruit'])
+#Label our columns as color and fruit
+df['color'],df['fruit']=color,fruit
+ 
+#Print everything
+print(df)
