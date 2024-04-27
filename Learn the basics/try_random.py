@@ -20,3 +20,17 @@ print(random.randrange(3, 9))
 # # Randint
 # Syntax : random.randint(start, stop)
 print(random.randint(3, 9))
+
+# # Choice
+# The choice() method returns a randomly selected element from the specified sequence.
+# The sequence can be a string, a range, a list, a tuple or any other kind of sequence.
+# Syntax : random.choice(sequence)
+mylist = ["apple", "banana", "cherry"]
+print(random.choice(mylist))
+
+# # Choices
+# The choices() method returns a list with the randomly selected element from the specified sequence.
+# You can weigh the possibility of each result with the weights parameter or the cum_weights parameter.
+# The sequence can be a string, a range, a list, a tuple or any other kind of sequence.
+# Syntax : random.choices(sequence, weights=None, cum_weights=None, k=1)
+print(random.choices(mylist, weights = [10, 1, 1], k = 14))
