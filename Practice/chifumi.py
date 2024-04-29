@@ -37,10 +37,10 @@ def compare_players_choices(virtual_player, human_player):
     rules = [[0, 1], [1, 2], [2, 0]]
     for rule in rules:
         if virtual_player in rule and human_player in rule:
-            result = {
-                'winner': 4, 
-                'loser': 4, 
-            }
+            if virtual_player == rule[0]:
+                return {'winner': 'Virtual player', 'loser': 'Human player'}
+            else:
+                return {'winner': 'Human player', 'loser': 'Virtual player'}
             print(locals().keys())
 
 print(compare_players_choices(1, 2))
