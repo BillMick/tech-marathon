@@ -81,3 +81,10 @@ required to execute the algorithm. The efficiency is measured with the help of
 
 The study of change in performance of the algorithm with the change in the order of the 
 input size is defined as *asymptotic analysis*.
+# # Asymptotic Notations
+Asymptotic notations are the mathematical notations used to describe the running time 
+of an algorithm when the input tends towards a particular value or a limiting value.
+There are mainly three asymptotic notations:
+- Big-O notation
+- Omega notation
+- Theta notation
