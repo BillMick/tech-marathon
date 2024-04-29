@@ -1,0 +1,83 @@
+## Data Structure And Algorithms
+A computer program is a collection of instructions to perform a specific task. 
+For this, a computer program may need to store data, retrieve data, and perform computations on the data.
+
+# Definition :
+A data structure is a named location that can be used to store and organize data. 
+And, an algorithm is a collection of steps to solve a particular problem. Learning data 
+structures and algorithms allow us to write efficient and optimized computer programs.
+
+# Note: 
+Data structure and data types are slightly different. Data structure is the collection 
+of data types arranged in a specific order.
+
+Types of Data Structure
+Basically, data structures are divided into two categories:
+· Linear data structure
+· Non-linear data structure
+
+# Linear data structure
+Elements are arranged in sequence one after the other. 
+Since elements are arranged in particular order, they are easy to implement.
+However, when the complexity of the program increases, the linear data structures
+might not be the best choice because of operational complexities.
+eg.: 
+- *Array Data Structure* : elements in memory are arranged in continuous memory. 
+    All the elements of an array are of the same type.
+- *Stack Data Structure* : elements are stored in the LIFO principle.
+- *Queue Data Structure* : the queue data structure works in the FIFO principle.
+- *Linked List Data Structure* : data elements are connected through a series of nodes. 
+    And, each node contains the data items and address to the next node.
+
+# Non linear data structures
+Elements in non-linear data structures are not in any sequence. 
+Instead they are arranged in a hierarchical manner where one 
+element will be connected to one or more elements.
+
+Non-linear data structures are further divided into :
+- *graph* based data structures : each node is called vertex and each vertex 
+    is connected to other vertices through edges.
+    Examples : 
+    - Spanning Tree and Minimum Spanning Tree
+    - Strongly Connected Components
+    - Adjacency Matrix
+    - Adjacency List
+- *tree* based data structures : a tree is also a collection of vertices and edges. 
+    However, in tree data structure, there can only be one edge between two vertices.
+    Examples :
+    - Binary Tree
+    - Binary Search Tree
+    - AVL Tree
+    - B-Tree
+    - B+ Tree
+    - Red-Black Tree
+
+# Use of Data Structures and Algorithms to Make Your Code Scalable
+Two of the most valuable resources for a computer program are time and memory.
+The time taken by the computer to run code is:
+`Time to run code = number of instructions * time to execute each instruction`
+The number of instructions depends on the code you used, and the time taken to 
+execute each code depends on your machine and compiler.
+
+Generally, software development involves learning new technologies on a daily basis. You get 
+to learn most of these technologies while using them in one of your projects. However, it is 
+not the case with algorithms.
+
+If you don't know algorithms well, you won't be able to identify if you can optimize the code 
+you are writing right now. You are expected to know them in advance and apply them wherever 
+possible and critical.
+
+We specifically talked about the scalability of algorithms. A software system consists of 
+many such algorithms. Optimizing any one of them leads to a better system.
+
+However, it's important to note that this is not the only way to make a system scalable. 
+For example, a technique known as **distributed computing** allows independent parts of 
+a program to run to multiple machines together making it even more scalable.
+
+# Asymptotic Analysis: Big-O Notation and More
+The efficiency of an algorithm depends on the amount of time, storage and other resources 
+required to execute the algorithm. The efficiency is measured with the help of 
+*asymptotic notations*.
+
+The study of change in performance of the algorithm with the change in the order of the 
+input size is defined as *asymptotic analysis*.
