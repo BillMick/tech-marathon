@@ -18,6 +18,7 @@ import array as arr
 numbers = arr.array('i',[10,20,30])
 print(numbers)
 print(len(numbers)) # gets the length
+print(numbers[1]) # gets the 2nd element
 
 # # Linked lists
 # Linked lists are less rigid in their storage structure and elements are 
