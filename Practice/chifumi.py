@@ -95,12 +95,15 @@ def main():
         human_player = human_player_choice()
         compare_players_choices(virtual_player = virtual_player, human_player = human_player - 1)
         present_results()
-        game = input("\nDo you want to continue the game ? (Yes/No) ").lower()
-        if game not in ['y', 'yes', 'o', 'oui']:
-            print('\n##############################', "Thanks for this game. See you!", '##############################', sep = "\n")
-            break
+        while 1:
+            game = input("\nDo you want to continue the game ? (Yes/No) ").lower()        
+            if game in ['n', 'no', 'non']:
+                print('\n##############################', "Thanks for this game. See you!", '##############################', sep = "\n")
+                exit(0)
+            elif game in ['y', 'yes', 'o', 'oui']:
+                break
 
-# if __name__ == "main":
-#     main()
+if __name__ == "__main__":
+    main()
 
-main()
+# print(present_results.__doc__)
