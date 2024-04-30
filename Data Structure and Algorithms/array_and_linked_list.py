@@ -23,6 +23,34 @@ print(numbers[1]) # gets the 2nd element
 # second to last element would have an index of -2, and so on.
 print(numbers[-1]) #gets last item
 
+# # How to Search Through an Array in Python
+#search for the index of the value 10
+print(numbers.index(10))
+# If there is more than one element with the same value, the index 
+# of the first instance of the value will be returned
+# How to Add a New Value to an Array
+# To add one single value at the end of an array, use the append() method:
+numbers.append(40)
+print(numbers)
+# Use the extend() method, which takes an iterable (such as a list of items)
+# as an argument. Again, make sure that the new items are all the same data type.
+numbers.extend([40,50,60])
+print(numbers)
+# And what if you don't want to add an item to the end of an array? Use the 
+# insert() method, to add an item at a specific position.
+numbers.insert(0, 17)
+print(numbers)
+# To remove an element from an array, use the remove() method and include the 
+# value as an argument to the method. With remove(), only the first instance of
+# the value you pass as an argument will be removed.
+numbers.remove(40)
+print(numbers)
+# You can also use the pop() method, and specify the position of the element to be removed:
+numbers.pop(0)
+print(numbers)
+
+
+
 # # Linked lists
 # Linked lists are less rigid in their storage structure and elements are 
 # usually not stored in contiguous locations, hence they need to be stored
