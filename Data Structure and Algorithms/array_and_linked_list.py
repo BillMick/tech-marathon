@@ -54,4 +54,4 @@ print(numbers)
 # # Linked lists
 # Linked lists are less rigid in their storage structure and elements are 
 # usually not stored in contiguous locations, hence they need to be stored
-# with additional tags giving a reference to the next element. 
+# with additional tags giving a reference to the next element.
