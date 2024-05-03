@@ -77,3 +77,40 @@ print(list_1)
 # If you want to populate it at creation, then you can give it an iterable as input:
 list_2 = deque(['1', '2', '3'])
 print(list_2)
+list_3 = deque('abc')
+print(list_3)
+list_4 = deque([{'data': 'a'}, {'data': 'b'}])
+print(list_4)
+print("Append '4' to list 2 :")
+list_2.append('4')
+print(list_2)
+print("Pop '4' from list 2 :")
+list_2.pop()
+print(list_2)
+# Both append() and pop() add or remove elements from the right side of the linked list.
+# However, you can also use deque to quickly add or remove elements from the left side, 
+# or head, of the list.
+print("Append left '5' to list 2 :")
+list_2.appendleft('5')
+print(list_2)
+print("Pop '5' from list 2 :")
+list_2.popleft()
+print(list_2)
+print("Remove all elements from list 3.")
+print(f"list_3 = {list_3}")
+print(f"list_3 = {list_3.clear()}")
+print("Extend the right side of the deque.")
+list_2.extend(list_4)
+print(list_2)
+print("Extend the left side of the deque.")
+list_2.extendleft(list_4)
+print(list_2)
+print("Remove the first occurrence of value. If not found, raises a ValueError.")
+list_2.remove({'data': 'b'})
+print(list_2)
+
+# count(x)
+# Count the number of deque elements equal to x.
+
+# # How to Implement Queues and Stacks
+# Queues
