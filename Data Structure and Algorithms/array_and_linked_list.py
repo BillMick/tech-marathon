@@ -139,4 +139,47 @@ print("Then, to mimic a real life queue, you should use 'popleft' and 'append'."
 # the last element to be inserted in the stack should be the first to be removed.
 print("Then, to mimic a real life stack, you should use 'pop' and 'append' OR 'popleft' and 'appendleft'.")
 
+# # Implementing Your Own Linked List
+print("\nImplementing Your Own Linked List.")
+class Linked_List:
+    def __init__(self, nodes = None):
+        self.head = None
+        if nodes is not None:
+            node = Node(data = nodes.pop(0))
+            self.head = node
+            for element in nodes:
+                node.next = Node(element)
+                node = node.next
+        
+    def __representation__(self):
+        node = self.head
+        nodes = []
+        while node is not None:
+            nodes.append(node.data)
+            node = node.next
+        nodes.append("None")
+        return " -> ".join(nodes)
+        
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+        
+    def __representation__(self):
+        return self.data
 
+head_node = Node("first")
+linked_list = Linked_List()
+linked_list.head = head_node
+print(linked_list.__representation__())
+second_node = Node("second")
+third_node = Node("third")
+fourth_node = Node("fourth")
+head_node.next = second_node
+second_node.next = third_node
+third_node.next = fourth_node
+print(linked_list.__representation__())
+
+print("Linked list creation more faster.")
+linked_list_2 = Linked_List(queue)
+print(linked_list_2)
