@@ -68,3 +68,12 @@ print(numbers)
 # deque (pronounced “deck”), which stands for double-ended queue.
 # collections.deque uses an implementation of a linked list in which you can access, insert, or
 # remove elements from the beginning or end of a list with constant O(1) performance.
+
+# # How to Use collections.deque
+print("How to Use collections.deque")
+from collections import deque
+list_1 = deque()
+print(list_1)
+# If you want to populate it at creation, then you can give it an iterable as input:
+list_2 = deque(['1', '2', '3'])
+print(list_2)
