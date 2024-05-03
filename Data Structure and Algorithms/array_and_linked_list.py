@@ -125,3 +125,18 @@ print(list_2.count('0'))
 
 # # How to Implement Queues and Stacks
 # Queues
+# With queues, you want to add values to a list (enqueue), 
+# and when the timing is right, you want to remove the element
+# that has been on the list the longest (dequeue).
+print('Queue concept : FIFO')
+queue = deque()
+queue.extend(['Michael', 'Mick', 'Mike'])
+print(f"queue = {queue}")
+print("Then, to mimic a real life queue, you should use 'popleft' and 'append'.")
+
+# Stacks
+# The only difference is that the stack uses the LIFO approach, meaning that
+# the last element to be inserted in the stack should be the first to be removed.
+print("Then, to mimic a real life stack, you should use 'pop' and 'append' OR 'popleft' and 'appendleft'.")
+
+
