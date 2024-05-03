@@ -55,3 +55,11 @@ print(numbers)
 # Linked lists are less rigid in their storage structure and elements are 
 # usually not stored in contiguous locations, hence they need to be stored
 # with additional tags giving a reference to the next element.
+# Each element of a linked list is called a node, and every node has two different fields:
+# * Data contains the value to be stored in the node.
+# * Next contains a reference to the next node on the list.
+# A linked list is a collection of nodes. The first node is called the head, 
+# and it’s used as the starting point for any iteration through the list. 
+# The last node must have its next reference pointing to None to determine the 
+# end of the list.
+# .
