@@ -159,6 +159,19 @@ class Linked_List:
             node = node.next
         nodes.append("None")
         return " -> ".join(nodes)
+    
+    def __iterating__(self):
+        node = self.head
+        while node is not None:
+            yield node
+            node = node.next
+    
+    def add_to_begin(self, node):
+        node.next = self.head
+        self.head = node
+    
+    def add_to_end(self, node):
+        pass
         
 class Node:
     def __init__(self, data):
@@ -180,6 +193,12 @@ second_node.next = third_node
 third_node.next = fourth_node
 print(linked_list.__representation__())
 
-print("Linked list creation more faster.")
-linked_list_2 = Linked_List(queue)
-print(linked_list_2)
+# print("Linked list creation more faster.")
+# linked_list_2 = Linked_List()
+# linked_list_2.__init__(nodes=queue)
+# print(linked_list_2)
+
+yielded_nodes = linked_list.__iterating__()
+for i in yielded_nodes:
+    print(i)
+
