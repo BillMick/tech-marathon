@@ -40,4 +40,6 @@ print("""In Interviews, Use Heaps When ...\nHeaps are designed to do one specifi
       · Find the first k non-repeating characters in a string in a single 
       traversal.""")
 
-print("""""")
+print("""There are other ways of constructing heaps (such as binomial 
+      heaps and Fibonacci heaps) that can improve the asymptotic run time 
+      slightly, but that support the same operations.""")
