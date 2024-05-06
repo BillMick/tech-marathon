@@ -1,4 +1,4 @@
-# # Heaps Stacks and Queues
+# # Heaps 
 print("""The purpose of a min-heap is to store objects that have a partial
       order on them. It has a fast (O(log n)) method for removing the 
       minimum object from the heap. Min-heaps are useful for calculations 
