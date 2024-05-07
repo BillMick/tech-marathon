@@ -27,17 +27,17 @@ class Queue:
         return len(self.stack)
     
     def top(self) -> any:
-        return self.stack[0]
+        return self.stack[0] # first in.
     
     def bottom(self) -> any:
-        return self.stack[-1]
+        return self.stack[-1] # last in.
     
     def push(self, element) -> any:
         self.stack.append(element)
         return self.stack
     
     def pop(self) -> any:
-        self.stack.pop()
+        self.stack.pop(0)
         return self.stack
     
     def display(self) -> None:
@@ -52,12 +52,37 @@ print(my_stack.push('M'))
 print("Size: ", my_stack.size())
 print("Is empty: ", my_stack.empty())
 print(my_stack.pop())
-print("Last element (in the top): ", my_stack.top())
-print("First element (in the bottom): ", my_stack.bottom())
+print("Last element in (in the top): ", my_stack.top())
+print("First element in (in the bottom): ", my_stack.bottom())
 
-print("""""")
+# # Implementation using collections.deque
+print("""Queue in Python can be implemented using deque class from the
+      collections module. Deque is preferred over list in the cases where
+      we need quicker append and pop operations from both the ends of
+      container, as deque provides an O(1) time complexity for append and
+      pop operations as compared to list which provides O(n) time complexity.
+      Instead of enqueue and deque, append() and popleft() functions are used.""")
 
-print("""""")
+from collections import deque
+q = deque()
+q.append('a')
+q.append('b')
+q.append('c')
+print("Initial queue")
+print(q)
+print("\nElements dequeued from the queue")
+print(q.popleft())
+print(q.popleft())
+print(q.popleft())
+
+print("\nQueue after removing elements")
+print(q)
+
+# # Implementation using queue.Queue
+print("""Queue is built-in module of Python which is used to implement
+      a queue. queue.Queue(maxsize) initializes a variable to a maximum
+      size of maxsize. A maxsize of zero '0' means a infinite queue.
+      This Queue follows FIFO rule.""")
 
 print("""""")
 
