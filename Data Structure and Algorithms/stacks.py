@@ -93,7 +93,7 @@ class StackDeque:
         self.stack.pop()
         return self.stack
 
-my_deque_stack = StackDeque
+my_deque_stack = StackDeque()
 my_deque_stack.push(element='a')
 my_deque_stack.push('b')
 my_deque_stack.push('c')
