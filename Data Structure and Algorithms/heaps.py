@@ -139,5 +139,6 @@ my_heap.insert(11)
 my_heap.insert(10)
 
 print(my_heap.delete_min()) # removing min node i.e 5 
+print(my_heap.heap_list)
 
  
