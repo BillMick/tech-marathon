@@ -51,3 +51,22 @@ my_dict.pop('Ava')   #removes the value of 'Ava'
 my_dict.popitem()    #removes the last inserted item
 print(my_dict)
 
+print("Converting Dictionary into a dataframe.")
+import pandas as pd
+emp_details = {'Employee': {'Dave': {'ID': '001',
+                                     'Salary': 2000,
+                                     'Designation':'Python Developer'},
+                            'Ava': {'ID':'002',
+                                    'Salary': 2300,
+                                    'Designation': 'Java Developer'},
+                            'Joe': {'ID': '003',
+                                    'Salary': 1843,
+                                    'Designation': 'Hadoop Developer'}}}
+df = pd.DataFrame(emp_details['Employee'])
+print("####################################################################")
+print(df)
+print("####################################################################")
+# import string
+# print(string.ascii_letters)
+
+print('Understand the Hash Function.')
