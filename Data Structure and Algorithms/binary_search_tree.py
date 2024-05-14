@@ -22,6 +22,22 @@ print('IMPLEMENTING A B-TREE IN PYTHON')
 print("""Our implementation won’t use a Tree class, but instead just a Node class. Binary 
       trees are really just a pointer to a root node that in turn connects to each child 
       node, so we’ll run with that idea.""")
+
+print("""There are many applications of binary search trees in real life, and one of the most
+common use cases is storing indexes and keys in a database.""")
+print("Other common uses include:")
+print("""· Pathfinding algorithms in video games (A*) use BSTs
+· File compression using a Huffman encoding scheme uses a binary search tree
+· Rendering calculations - Doom (1993) was famously the first game to use a BST
+· Compilers for low-level coding languages parse syntax using a BST
+· Almost every database in existence uses BSTs for key lookups""")
+
+print("""WHAT’S THE DIFFERENCE BETWEEN A BINARY TREE AND A LINKED LIST?
+While binary trees and linked lists both use pointers to keep track of nodes, 
+binary trees are more efficient for searching. In fact, linked lists are O(n) 
+when used to search for a specific element - that’s pretty bad! Linked lists 
+excel at removing and inserting elements quickly in the middle of the list.""")
+
 class BSTNode:
     def __init__(self, val=None):
         self.left = None
