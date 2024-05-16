@@ -10,6 +10,22 @@ print("""Binary trees are useful for storing data in an organized manner so that
       linear O(n) time required to find elements in an unsorted array. Many popular 
       production databases such as PostgreSQL and MySQL use binary trees under the 
       hood to speed up CRUD operations.""")
+print("""Types of binary search trees
+The various types of binary trees include:
+· Complete binary tree: All levels of the tree are filled and the root key has a sub-tree 
+that contains two or no nodes.
+· Balanced binary tree: The leaf nodes are not far from the root which is more of a relative
+metric. The nodes can be more than a single level in a tree. A balanced tree is quite 
+efficient when searching, inserting, and deleting components.
+· Full binary tree: It contains an equal number of nodes in each subtree except for the 
+leaf nodes.""")
+print("""PROS OF A BST
+They allow fast lookup, addition, and deletion of items in a tree.
+It can be used to implement either dynamic sets of elements or lookup tables.
+They allow one to find an element using its key.
+They use a logarithmic time complexity of k = log(n) where k is the lookup, 
+insertion, and removal time and n is the number of items stored in the tree. 
+This is better than linear search time.""")
 print("""CONS OF A BST
 · Slow for a brute-force search. If you need to iterate over each node, you might have 
 more success with an array.
