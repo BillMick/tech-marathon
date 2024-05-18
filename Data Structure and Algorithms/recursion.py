@@ -40,3 +40,22 @@ created for each function call. When the base case is reached, the function retu
 value to the function by whom it is called and memory is de-allocated and the process 
 continues.""")
 
+print()
+
+print(""" ######### A Python 3 program to demonstrate working of recursion ######### """)
+  
+  
+def printFun(test): 
+  
+    if (test < 1): 
+        return
+    else: 
+  
+        print(test, end=" ") 
+        printFun(test-1)  # statement 2 
+        print(test, end=" ") 
+        return
+  
+# Driver Code 
+test = 3
+printFun(test) 
