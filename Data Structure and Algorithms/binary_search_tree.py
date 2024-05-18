@@ -46,7 +46,16 @@ print("""· Pathfinding algorithms in video games (A*) use BSTs
 · File compression using a Huffman encoding scheme uses a binary search tree
 · Rendering calculations - Doom (1993) was famously the first game to use a BST
 · Compilers for low-level coding languages parse syntax using a BST
-· Almost every database in existence uses BSTs for key lookups""")
+· Almost every database in existence uses BSTs for key lookups
+· Graph algorithms: BSTs can be used to implement graph algorithms, such as in minimum spanning
+tree algorithms.
+· Priority Queues: BSTs can be used to implement priority queues, where the element with the 
+highest priority is at the root of the tree, and elements with lower priority are stored in the 
+subtrees.
+· Self-balancing binary search tree: BSTs can be used as a self-balancing data structures such 
+as AVL tree and Red-black tree.
+· Data storage and retrieval: BSTs can be used to store and retrieve data quickly, such as in 
+databases, where searching for a specific record can be done in logarithmic time.""")
 
 print("""WHAT’S THE DIFFERENCE BETWEEN A BINARY TREE AND A LINKED LIST?
 While binary trees and linked lists both use pointers to keep track of nodes, 
@@ -151,6 +160,8 @@ class BSTNode:
         if self.val is not None:
             vals.append(self.val)
         return vals
+    
+    
 
 def main():
     nums = [12, 6, 18, 19, 21, 11, 3, 5, 4, 24, 18]
