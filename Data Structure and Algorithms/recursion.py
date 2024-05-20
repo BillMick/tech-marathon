@@ -60,6 +60,9 @@ def printFun(test):
 test = 3
 printFun(test) 
 
+print()
+print()
+
 print("""Example:  Real Applications of Recursion in real problems
 Recursion is a powerful technique that has many applications in computer science and programming. Here are some of the common applications of recursion:
 Tree and graph traversal: Recursion is frequently used for traversing and searching data structures such as trees and graphs. Recursive algorithms can be used to explore all the nodes or vertices of a tree or graph in a systematic way.
@@ -70,3 +73,12 @@ Backtracking algorithms: Backtracking algorithms are used to solve problems that
 Memoization: Memoization is a technique that involves storing the results of expensive function calls and returning the cached result when the same inputs occur again. Memoization can be implemented using recursive functions to compute and cache the results of subproblems.
 These are just a few examples of the many applications of recursion in computer science and programming. Recursion is a versatile and powerful tool that can be used to solve many different types of problems.
 """)
+
+print()
+
+print("""Summary of Recursion:
+· There are two types of cases in recursion i.e. recursive case and a base case.
+· The base case is used to terminate the recursive function when the case turns out to be true.
+· Each recursive call makes a new copy of that method in the stack memory.
+· Infinite recursion may lead to running out of stack memory.
+· Examples of Recursive algorithms: Merge Sort, Quick Sort, Tower of Hanoi, Fibonacci Series, Factorial Problem, etc.""")
