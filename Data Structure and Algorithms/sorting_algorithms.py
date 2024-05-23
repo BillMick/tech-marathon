@@ -45,7 +45,7 @@ def run_sorting_algorithm(algorithm, array):
 
     # Finally, display the name of the algorithm and the
     # minimum time it took to run
-    print(f"Algorithm: {algorithm}. Minimum execution time: {min(times)}")
+    print('With timeit module', f"Algorithm: {algorithm}. Minimum execution time: {min(times)}")
 run_sorting_algorithm('sorted', unordered_array)
 
 print("""Measuring Efficiency With Big O Notation""")
@@ -59,4 +59,30 @@ print("""Bubble Sort is one of the most straightforward sorting algorithms. Its 
 Bubble sort consists of making multiple passes through a list, comparing elements one by one,
 and swapping adjacent items that are out of order.""")
 
+def bubble_sort(array):
+    n = len(array)
+    for i in range(n):
+        # Create a flag that will allow the function to
+        # terminate early if there's nothing left to sort
+        already_sorted = True
+        # Start looking at each item of the list one by one,
+        # comparing it with its adjacent value. With each
+        # iteration, the portion of the array that you look at
+        # shrinks because the remaining items have already been
+        # sorted.
+        for j in range(n - i - 1):
+            if array[j] > array[j + 1]:
+                # If the item you're looking at is greater than its
+                # adjacent value, then swap them
+                array[j], array[j + 1] = array[j + 1], array[j]
+                # Since you had to swap two elements,
+                # set the `already_sorted` flag to `False` so the
+                # algorithm doesn't finish prematurely
+                already_sorted = False
+        # If there were no swaps during the last iteration,
+        # the array is already sorted, and you can terminate
+        if already_sorted:
+            break
+    return array
 
+print('With Bubble sort algorithm: ', bubble_sort(unordered_array))
