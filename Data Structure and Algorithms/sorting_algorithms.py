@@ -48,5 +48,15 @@ def run_sorting_algorithm(algorithm, array):
     print(f"Algorithm: {algorithm}. Minimum execution time: {min(times)}")
 run_sorting_algorithm('sorted', unordered_array)
 
-"""Measuring Efficiency With Big O Notation"""
+print("""Measuring Efficiency With Big O Notation""")
+print("""This tutorial covers the Big O runtime complexity of each of the sorting algorithms discussed.
+It also includes a brief explanation of how to determine the runtime on each particular case.""")
+
+print("""The Bubble Sort Algorithm in Python""")
+print("""Bubble Sort is one of the most straightforward sorting algorithms. Its name comes from the 
+      way the algorithm works: With every new pass, the largest element in the list “bubbles up”
+      toward its correct position.
+Bubble sort consists of making multiple passes through a list, comparing elements one by one,
+and swapping adjacent items that are out of order.""")
+
 
