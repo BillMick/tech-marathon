@@ -17,3 +17,36 @@ unordered_array = [8, 2, 6, 4, 5]
 ordered_array = sorted(unordered_array)
 print(f"Unordered array: {unordered_array}", f"Ordered array: {ordered_array}", sep="\n")
 
+print("""\n############################# The Significance of Time Complexity #############################""")
+"""Two different ways to measure the runtime of sorting algorithms:
+· For a practical point of view, you’ll measure the runtime of the implementations using the timeit module.
+· For a more theoretical perspective, you’ll measure the runtime complexity of the algorithms using Big O notation."""
+
+print("""Timing Your Code""")
+print("""When comparing two sorting algorithms in Python, it’s always informative to look at how long each one takes 
+to run. The specific time each algorithm takes will be partly determined by your hardware, but you can still 
+use the proportional time between executions to help you decide which implementation is more time efficient.""")
+
+from random import randint
+from timeit import repeat
+
+def run_sorting_algorithm(algorithm, array):
+    # Set up the context and prepare the call to the specified
+    # algorithm using the supplied array. Only import the
+    # algorithm function if it's not the built-in `sorted()`.
+    setup_code = f"from __main__ import {algorithm}" \
+        if algorithm != "sorted" else ""
+
+    stmt = f"{algorithm}({array})"
+
+    # Execute the code ten different times and return the time
+    # in seconds that each execution took
+    times = repeat(setup=setup_code, stmt=stmt, repeat=3, number=10)
+
+    # Finally, display the name of the algorithm and the
+    # minimum time it took to run
+    print(f"Algorithm: {algorithm}. Minimum execution time: {min(times)}")
+run_sorting_algorithm('sorted', unordered_array)
+
+"""Measuring Efficiency With Big O Notation"""
+
