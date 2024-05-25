@@ -93,3 +93,13 @@ You learned earlier that Big O focuses on how the runtime grows in comparison to
 Doing so simplifies the notation to n2 - n. Since n2 grows much faster than n, this last term can be dropped as well, leaving bubble sort with an average- and worst-case complexity of O(n2).
 In cases where the algorithm receives an array that’s already sorted—and assuming the implementation includes the already_sorted flag optimization explained before—the runtime complexity will come down to a much better O(n) because the algorithm will not need to visit any element more than once.
 O(n), then, is the best-case runtime complexity of bubble sort. But keep in mind that best cases are an exception, and you should focus on the average case when comparing different algorithms."""
+
+"""Timing Your Bubble Sort Implementation"""
+ARRAY_LENGTH = 10000
+# Generate an array of `ARRAY_LENGTH` items consisting
+# of random integer values between 0 and 999
+array = [randint(0, 1000) for i in range(ARRAY_LENGTH)]
+
+# Call the function using the name of the sorting algorithm
+# and the array you just created
+run_sorting_algorithm(algorithm="bubble_sort", array=array)
