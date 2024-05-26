@@ -52,7 +52,7 @@ print("""Measuring Efficiency With Big O Notation""")
 print("""This tutorial covers the Big O runtime complexity of each of the sorting algorithms discussed.
 It also includes a brief explanation of how to determine the runtime on each particular case.""")
 
-print("""The Bubble Sort Algorithm in Python""")
+print("""######################################## The Bubble Sort Algorithm in Python ########################################""")
 print("""Bubble Sort is one of the most straightforward sorting algorithms. Its name comes from the 
       way the algorithm works: With every new pass, the largest element in the list “bubbles up”
       toward its correct position.
@@ -103,3 +103,61 @@ array = [randint(0, 1000) for i in range(ARRAY_LENGTH)]
 # Call the function using the name of the sorting algorithm
 # and the array you just created
 run_sorting_algorithm(algorithm="bubble_sort", array=array)
+
+"""Analyzing the Strengths and Weaknesses of Bubble Sort"""
+"""The main advantage of the bubble sort algorithm is its simplicity. It is straightforward to both implement and understand. This is probably the main reason why most computer science courses introduce the topic of sorting using bubble sort."""
+"""As you saw before, the disadvantage of bubble sort is that it is slow, with a runtime complexity of O(n2). Unfortunately, this rules it out as a practical candidate for sorting large arrays."""
+
+"""The Insertion Sort Algorithm in Python"""
+"""Like bubble sort, the insertion sort algorithm is straightforward to implement and understand. But unlike bubble sort, it builds the sorted list one element at a time by comparing each item with the rest of the list and inserting it into its correct position. This “insertion” procedure gives the algorithm its name."""
+
+def insertion_sort(array):
+    # Loop from the second element of the array until
+    # the last element
+    for i in range(1, len(array)):
+        # This is the element we want to position in its
+        # correct place
+        key_item = array[i]
+
+        # Initialize the variable that will be used to
+        # find the correct position of the element referenced
+        # by `key_item`
+        j = i - 1
+
+        # Run through the list of items (the left
+        # portion of the array) and find the correct position
+        # of the element referenced by `key_item`. Do this only
+        # if `key_item` is smaller than its adjacent values.
+        while j >= 0 and array[j] > key_item:
+            # Shift the value one position to the left
+            # and reposition j to point to the next element
+            # (from right to left)
+            array[j + 1] = array[j]
+            j -= 1
+
+        # When you finish shifting the elements, you can position
+        # `key_item` in its correct location
+        array[j + 1] = key_item
+
+    return array
+
+"""Measuring Insertion Sort’s Big O Runtime Complexity"""
+# Generate an array of `ARRAY_LENGTH` items consisting
+# of random integer values between 0 and 999
+array = [randint(0, 1000) for i in range(ARRAY_LENGTH)]
+
+# Call the function using the name of the sorting algorithm
+# and the array we just created
+run_sorting_algorithm(algorithm="insertion_sort", array=array)
+
+"""The Merge Sort Algorithm in Python"""
+"""Merge sort is a very efficient sorting algorithm. It’s based on the divide-and-conquer approach, a powerful algorithmic technique used to solve complex problems.
+To properly understand divide and conquer, you should first understand the concept of recursion. Recursion involves breaking a problem down into smaller subproblems until they’re small enough to manage. In programming, recursion is usually expressed by a function calling itself."""
+
+"""Divide-and-conquer algorithms typically follow the same structure:
+· The original input is broken into several parts, each one representing a subproblem that’s similar to the original but simpler.
+· Each subproblem is solved recursively.
+· The solutions to all the subproblems are combined into a single overall solution.
+In the case of merge sort, the divide-and-conquer approach divides the set of input values into two equal-sized parts, sorts each half recursively, and finally merges these two sorted parts into a single sorted list."""
+
+"""Implementing Merge Sort in Python"""
