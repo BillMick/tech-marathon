@@ -212,3 +212,5 @@ array = [randint(0, 1000) for i in range(ARRAY_LENGTH)]
 # Call the function using the name of the sorting algorithm
 # and the array you just created
 run_sorting_algorithm(algorithm="merge_sort", array=array)
+
+
