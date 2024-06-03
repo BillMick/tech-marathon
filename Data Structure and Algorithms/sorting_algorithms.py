@@ -29,7 +29,7 @@ use the proportional time between executions to help you decide which implementa
 
 from random import randint
 from timeit import repeat
-
+#################################################################################################
 def run_sorting_algorithm(algorithm, array):
     # Set up the context and prepare the call to the specified
     # algorithm using the supplied array. Only import the
@@ -46,7 +46,8 @@ def run_sorting_algorithm(algorithm, array):
     # Finally, display the name of the algorithm and the
     # minimum time it took to run
     print('With timeit module', f"Algorithm: {algorithm}. Minimum execution time: {min(times)}")
-run_sorting_algorithm('sorted', unordered_array)
+# run_sorting_algorithm('sorted', unordered_array)
+#################################################################################################
 
 print("""Measuring Efficiency With Big O Notation""")
 print("""This tutorial covers the Big O runtime complexity of each of the sorting algorithms discussed.
