@@ -14,7 +14,19 @@ def reformat_number(number:str)->str:
         case 2:
             number = '0' + number
     return number
+
+def number_guessing(magic_number:str):
+    """
+    Get the user entry. This must be a number of at least one digit.
+    As we need a three digits number, zeros are completed to the left of
+    user entry if len(user_entry != 3)"""
+    user_entry = int(input("Guess the number: "))
+    user_entry = str(user_entry)
+    user_entry = reformat_number(user_entry)
+    return user_entry
         
 
 number = random_number()
 print(f"{number}", f"{type(number)}")
+guess = number_guessing(number)
+print(f"{guess}", f"{type(guess)}")
