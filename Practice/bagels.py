@@ -34,9 +34,23 @@ def number_guessing(magic_number:str):
         print("Invalide input. Try again.")
         user_entry = number_guessing(magic_number)
         return user_entry
-        
+
+def comparison(magic_number:str, user_entry:str)->bool:
+    pico, fermi = [], []
+    for i in range(0, len(user_entry)):
+        if user_entry[i] in magic_number: pico.append(True); pico.append(False)
+        if user_entry[i] == magic_number[i]: fermi.append(True); fermi.append(False)
+    if True not in pico and True not in fermi:
+        return 'Bagels'
+    elif True in fermi:
+        return 'Fermi'
+    elif True in pico:
+        return 'Pico'
+
 
 number = random_number()
 print(f"{number}", f"{type(number)}")
 guess = number_guessing(number)
 print(f"{guess}", f"{type(guess)}")
+compare = comparison(number, guess)
+print(f"{compare}", f"{type(compare)}")
