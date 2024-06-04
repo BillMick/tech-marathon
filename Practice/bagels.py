@@ -49,13 +49,27 @@ def comparison(magic_number:str, user_entry:str)->str:
         else:
             fermi.append(False)
     if True not in pico and True not in fermi:
-        return 'Bagels'
+        return 'Bagels '
     elif fermi == [True, True, True]:
         return 'Correct'
     elif True in fermi:
-        return 'Fermi'
+        return 'Fermi  '
     elif True in pico:
-        return 'Pico'
+        return 'Pico   '
+
+def stats(magic_number:str, guessed_numbers_list:list, comparison_results_list:list)->None:
+    rounds = len(comparison_results_list)
+    for i in range(0, rounds):
+        if i == rounds - 1:
+            print(f"""
+              ##########################################
+              ### Guess #{i + 1} || {magic_number} || {guessed_numbers_list[i]} || {comparison_results_list[i]} ###
+              ##########################################""")
+        else:
+            print(f"""
+              ##########################################
+              ### Guess #0{i + 1} || {magic_number} || {guessed_numbers_list[i]} || {comparison_results_list[i]} ###
+              ##########################################""")
 
 def main():
     print("""
@@ -73,12 +87,11 @@ def main():
     ### You have 10 guesses to get it.                                      ### 
     ########################################################################### 
     """)
-    number_of_round = 10
-    found = False
+    number_of_guesses = 10 # number of attemps
     guessed_numbers_list, comparison_results_list = [], []
     while True:
         magic_number = random_number()
-        for i in range(0, number_of_round):
+        for i in range(0, number_of_guesses):
             print(f'Guess #{i + 1}:')
             guessed_number = number_guessing(magic_number)
             guessed_numbers_list.append(guessed_number)
@@ -90,6 +103,8 @@ def main():
                 break
             elif i == 9:
                 print('Number not found...', f'It was {magic_number}.')
+        # Game stats
+        stats(magic_number, guessed_numbers_list, comparison_results_list)
         while 1:
             game = input("\nDo you want to play again ? (Yes/No) ").lower()        
             if game in ['n', 'no', 'non']:
@@ -101,10 +116,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-# number = random_number()
-# print(f"{number}", f"{type(number)}")
-# guess = number_guessing(number)
-# print(f"{guess}", f"{type(guess)}")
-# compare = comparison(number, guess)
-# print(f"{compare}", f"{type(compare)}")
