@@ -128,7 +128,3 @@ def main():
 if __name__ == '__main__':
     main()
     
-    # m = '753'
-    # a = ['412', '745', '753']
-    # b = ['Pico   ', 'Fermi  ', 'Correct']
-    # stats(m, a, b)
