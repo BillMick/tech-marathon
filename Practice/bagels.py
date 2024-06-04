@@ -20,10 +20,16 @@ def number_guessing(magic_number:str):
     Get the user entry. This must be a number of at least one digit.
     As we need a three digits number, zeros are completed to the left of
     user entry if len(user_entry != 3)"""
-    user_entry = int(input("Guess the number: "))
-    user_entry = str(user_entry)
-    user_entry = reformat_number(user_entry)
-    return user_entry
+    try:
+        user_entry = int(input("Guess the number: "))
+        user_entry = str(user_entry)
+        assert 0 < len(user_entry) < 4
+        user_entry = reformat_number(user_entry)
+        return user_entry
+    except (TypeError, ValueError, AssertionError):
+        print("Invalide input. Try again.")
+        user_entry = number_guessing(magic_number)
+        return user_entry
         
 
 number = random_number()
