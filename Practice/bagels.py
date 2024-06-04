@@ -20,7 +20,7 @@ def reformat_number(number:int)->str:
             number = '0' + number
     return number
 
-def number_guessing(magic_number:str):
+def number_guessing()->str:
     """
     Get the user entry. This must be a number of at least one digit.
     As we need a three digits number, zeros are completed to the left of
@@ -32,7 +32,7 @@ def number_guessing(magic_number:str):
         return user_entry
     except (TypeError, ValueError, AssertionError):
         print("Invalide input. Try again.")
-        user_entry = number_guessing(magic_number)
+        user_entry = number_guessing()
         return user_entry
 
 def comparison(magic_number:str, user_entry:str)->str:
@@ -70,7 +70,7 @@ def stats(magic_number:str, guessed_numbers_list:list, comparison_results_list:l
               ### Guess n°  || Magic Number || Guessed Number || Decision   ###
               {'-'*65}""")
     for i in range(0, rounds):
-        if i > 9:
+        if i > 8:
             print(f"""
               {'-'*65}
               ###    #{i + 1}    ||      {magic_number}     ||       {guessed_numbers_list[i]}      ||   {comparison_results_list[i]}  ###""")
@@ -98,24 +98,26 @@ def main():
     ### You have 10 guesses to get it.                                      ### 
     {'#'*75} 
     """)
-    number_of_guesses = 10 # number of attemps
-    guessed_numbers_list, comparison_results_list = [], []
     while True:
-        magic_number = random_number()
+        number_of_guesses = 10 # number of attempts
+        guessed_numbers_list, comparison_results_list = [], [] # initialization
+        magic_number = random_number() # call for the 3-digits number generator
+        # Loop to process the number of attempts
         for i in range(0, number_of_guesses):
             print(f'Guess #{i + 1}:')
-            guessed_number = number_guessing(magic_number)
-            guessed_numbers_list.append(guessed_number)
-            comparison_result = comparison(magic_number, guessed_number)
-            comparison_results_list.append(comparison_result)
+            guessed_number = number_guessing(magic_number) 
+            guessed_numbers_list.append(guessed_number) # for stats need
+            comparison_result = comparison(magic_number, guessed_number) # Comparison making
+            comparison_results_list.append(comparison_result) # for stats need
             print(comparison_result)
             if comparison_result == 'Correct':
                 print('Congrats !!! You have found the number. See your stats below.')
                 break
             elif i == 9:
                 print('Number not found...', f'It was {magic_number}.')
-        # Game stats
+        # Game stats.
         stats(magic_number, guessed_numbers_list, comparison_results_list)
+        # Ask for want of playing another round.
         while 1:
             game = input("\nDo you want to play again ? (Yes/No) ").lower()        
             if game in ['n', 'no', 'non']:
