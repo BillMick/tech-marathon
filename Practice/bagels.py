@@ -37,9 +37,18 @@ def number_guessing(magic_number:str):
 
 def comparison(magic_number:str, user_entry:str)->str:
     pico, fermi = [], []
+    print(len(user_entry))
     for i in range(0, len(user_entry)):
-        if user_entry[i] in magic_number: pico.append(True); pico.append(False)
-        if user_entry[i] == magic_number[i]: fermi.append(True); fermi.append(False)
+        # if user_entry[i] in magic_number: pico.append(True); pico.append(False)
+        # if user_entry[i] == magic_number[i]: fermi.append(True); fermi.append(False)
+        if user_entry[i] in magic_number: 
+            pico.append(True)
+        else:
+            pico.append(False)
+        if user_entry[i] == magic_number[i]: 
+            fermi.append(True)
+        else:
+            fermi.append(False)
     if True not in pico and True not in fermi:
         return 'Bagels'
     elif fermi == [True, True, True]:
@@ -50,9 +59,10 @@ def comparison(magic_number:str, user_entry:str)->str:
         return 'Pico'
 
 
-number = random_number()
-print(f"{number}", f"{type(number)}")
-guess = number_guessing(number)
-print(f"{guess}", f"{type(guess)}")
-compare = comparison(number, guess)
-print(f"{compare}", f"{type(compare)}")
+
+# number = random_number()
+# print(f"{number}", f"{type(number)}")
+# guess = number_guessing(number)
+# print(f"{guess}", f"{type(guess)}")
+# compare = comparison(number, guess)
+# print(f"{compare}", f"{type(compare)}")
