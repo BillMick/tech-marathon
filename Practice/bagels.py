@@ -105,7 +105,7 @@ def main():
         # Loop to process the number of attempts
         for i in range(0, number_of_guesses):
             print(f'Guess #{i + 1}:')
-            guessed_number = number_guessing(magic_number) 
+            guessed_number = number_guessing() 
             guessed_numbers_list.append(guessed_number) # for stats need
             comparison_result = comparison(magic_number, guessed_number) # Comparison making
             comparison_results_list.append(comparison_result) # for stats need
