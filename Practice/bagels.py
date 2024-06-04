@@ -36,6 +36,9 @@ def number_guessing(magic_number:str):
         return user_entry
 
 def comparison(magic_number:str, user_entry:str)->str:
+    """
+    Comparison of magic_number and user entry.
+    """
     pico, fermi = [], []
     for i in range(0, len(user_entry)):
         # if user_entry[i] in magic_number: pico.append(True); pico.append(False)
@@ -58,13 +61,16 @@ def comparison(magic_number:str, user_entry:str)->str:
         return 'Pico   '
 
 def stats(magic_number:str, guessed_numbers_list:list, comparison_results_list:list)->None:
+    """
+    Bagels game stats printing.
+    """
     rounds = len(comparison_results_list)
     print(f"""
               {'-'*65}
               ### Guess n°  || Magic Number || Guessed Number || Decision   ###
               {'-'*65}""")
     for i in range(0, rounds):
-        if i == rounds - 1:
+        if i > 9:
             print(f"""
               {'-'*65}
               ###    #{i + 1}    ||      {magic_number}     ||       {guessed_numbers_list[i]}      ||   {comparison_results_list[i]}  ###""")
@@ -75,6 +81,8 @@ def stats(magic_number:str, guessed_numbers_list:list, comparison_results_list:l
     print(' '*13, '-'*65)
 
 def main():
+    """
+    Bagels game main function."""
     print(f"""
     {'#'*75}
     ### Bagels, a deductive logic game.                                     ###
