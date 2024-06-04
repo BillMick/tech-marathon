@@ -37,7 +37,6 @@ def number_guessing(magic_number:str):
 
 def comparison(magic_number:str, user_entry:str)->str:
     pico, fermi = [], []
-    print(len(user_entry))
     for i in range(0, len(user_entry)):
         # if user_entry[i] in magic_number: pico.append(True); pico.append(False)
         # if user_entry[i] == magic_number[i]: fermi.append(True); fermi.append(False)
@@ -58,7 +57,50 @@ def comparison(magic_number:str, user_entry:str)->str:
     elif True in pico:
         return 'Pico'
 
+def main():
+    print("""
+    ###########################################################################
+    ### Bagels, a deductive logic game.                                     ###
+    ###     By Al Sweigart al@inventwithpython.com                          ### 
+    ### I am thinking of a 3-digit number. Try to guess what it is.         ### 
+    ### Here are some clues:                                                ### 
+    ###     When I say:     That means:                                     ### 
+    ###     Pico            One digit is correct but in the wrong position. ### 
+    ###     Fermi           One digit is correct and in the right position. ### 
+    ###     Bagels          No digit is correct.                            ### 
+    ###     Correct         You find the number.                            ### 
+    ### I have thought up a number.                                         ### 
+    ### You have 10 guesses to get it.                                      ### 
+    ########################################################################### 
+    """)
+    number_of_round = 10
+    found = False
+    guessed_numbers_list, comparison_results_list = [], []
+    while True:
+        magic_number = random_number()
+        for i in range(0, number_of_round):
+            print(f'Guess #{i + 1}:')
+            guessed_number = number_guessing(magic_number)
+            guessed_numbers_list.append(guessed_number)
+            comparison_result = comparison(magic_number, guessed_number)
+            comparison_results_list.append(comparison_result)
+            print(comparison_result)
+            if comparison_result == 'Correct':
+                print('Congrats !!! You have found the number.')
+                break
+            elif i == 9:
+                print('Number not found...', f'It was {magic_number}.')
+        while 1:
+            game = input("\nDo you want to play again ? (Yes/No) ").lower()        
+            if game in ['n', 'no', 'non']:
+                print('\n##############################', "Thanks for this game. See you!", '##############################', sep = "\n")
+                exit(0)
+            elif game in ['y', 'yes', 'o', 'oui']:
+                break
 
+
+if __name__ == '__main__':
+    main()
 
 # number = random_number()
 # print(f"{number}", f"{type(number)}")
