@@ -59,21 +59,24 @@ def comparison(magic_number:str, user_entry:str)->str:
 
 def stats(magic_number:str, guessed_numbers_list:list, comparison_results_list:list)->None:
     rounds = len(comparison_results_list)
+    print(f"""
+              {'-'*65}
+              ### Guess n°  || Magic Number || Guessed Number || Decision   ###
+              {'-'*65}""")
     for i in range(0, rounds):
         if i == rounds - 1:
             print(f"""
-              ##########################################
-              ### Guess #{i + 1} || {magic_number} || {guessed_numbers_list[i]} || {comparison_results_list[i]} ###
-              ##########################################""")
+              {'-'*65}
+              ###    #{i + 1}    ||      {magic_number}     ||       {guessed_numbers_list[i]}      ||   {comparison_results_list[i]}  ###""")
         else:
             print(f"""
-              ##########################################
-              ### Guess #0{i + 1} || {magic_number} || {guessed_numbers_list[i]} || {comparison_results_list[i]} ###
-              ##########################################""")
+              {'-'*65}
+              ###    #0{i + 1}    ||      {magic_number}     ||       {guessed_numbers_list[i]}      ||   {comparison_results_list[i]}  ###""")
+    print(' '*13, '-'*65)
 
 def main():
-    print("""
-    ###########################################################################
+    print(f"""
+    {'#'*75}
     ### Bagels, a deductive logic game.                                     ###
     ###     By Al Sweigart al@inventwithpython.com                          ### 
     ### I am thinking of a 3-digit number. Try to guess what it is.         ### 
@@ -85,7 +88,7 @@ def main():
     ###     Correct         You find the number.                            ### 
     ### I have thought up a number.                                         ### 
     ### You have 10 guesses to get it.                                      ### 
-    ########################################################################### 
+    {'#'*75} 
     """)
     number_of_guesses = 10 # number of attemps
     guessed_numbers_list, comparison_results_list = [], []
@@ -99,7 +102,7 @@ def main():
             comparison_results_list.append(comparison_result)
             print(comparison_result)
             if comparison_result == 'Correct':
-                print('Congrats !!! You have found the number.')
+                print('Congrats !!! You have found the number. See your stats below.')
                 break
             elif i == 9:
                 print('Number not found...', f'It was {magic_number}.')
@@ -116,3 +119,8 @@ def main():
 
 if __name__ == '__main__':
     main()
+    
+    # m = '753'
+    # a = ['412', '745', '753']
+    # b = ['Pico   ', 'Fermi  ', 'Correct']
+    # stats(m, a, b)
