@@ -18,3 +18,11 @@ But this is not ideal practice as this introduces an unknown set of names into t
 PN.printForward(10)
 print("#"*15)
 PN.printBackwards(5)
+
+# import only pi from math module
+from math import pi
+
+print(pi)
+
+""" We can use the dir() function to list all the function names in a module. """
+print("All PN module functions names: ", dir(PN))
