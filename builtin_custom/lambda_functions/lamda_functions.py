@@ -18,5 +18,16 @@ Python is not inherently a functional language, but it adopted some functional
 concepts early on. In January 1994, map(), filter(), reduce(), and the lambda 
 operator were added to the language. """
 
+""" A lambda expression has three parts: keyword (lambda), a bound variable 
+(as argument) and a body (instructions). """
+lambda x: x # identity function
+
+# You can apply the function above to an argument by surrounding the function 
+# and its argument with parentheses:
+(lambda x: x*x)(7)
+
+# Because a lambda function is an expression, it can be named:
+sqrt_it = lambda x: x*x
+
 
 
