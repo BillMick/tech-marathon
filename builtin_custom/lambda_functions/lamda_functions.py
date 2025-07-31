@@ -97,10 +97,10 @@ a limitation to consider when an exception occurs, and a traceback shows only
 As you saw in the previous sections, a lambda form presents syntactic distinctions 
 from a normal function. In particular, a lambda function has the following 
 characteristics:
-It can only contain expressions and can't include statements in its body.
-It is written as a single line of execution.
-It does not support type annotations.
-It can be immediately invoked (IIFE). """
+    It can only contain expressions and can't include statements in its body.
+    It is written as a single line of execution.
+    It does not support type annotations.
+    It can be immediately invoked (IIFE). """
 
 """ No Statements
 A lambda function can't contain any statements. In a lambda function, 
@@ -124,3 +124,20 @@ It's a direct consequence of a lambda function being callable as it is defined.
 For example, this allows you to pass the definition of a Python lambda expression 
 to a higher-order function like map(), filter(), or functools.reduce(), or to a 
 key function. """
+
+""" Arguments
+Like a normal function object defined with def, Python lambda expressions support 
+all the different ways of passing arguments. This includes:
+    Positional arguments
+    Named arguments (sometimes called keyword arguments)
+    Variable list of arguments (often referred to as varargs)
+    Variable list of keyword arguments
+    Keyword-only arguments """
+# The following examples illustrate options open to you in order to pass arguments 
+# to lambda expressions:
+# (lambda x, y, z: x + y + z)(1, 2, 3)
+# (lambda x, y, z=3: x + y + z)(1, 2)
+# (lambda x, y, z=3: x + y + z)(1, y=2)
+# (lambda *args: sum(args))(1,2,3)
+# (lambda **kwargs: sum(kwargs.values()))(one=1, two=2, three=3)
+# (lambda x, *, y=0, z=0: x + y + z)(1, y=2, z=3)
