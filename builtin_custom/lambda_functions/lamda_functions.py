@@ -86,3 +86,41 @@ def add_f(x, y): return x + y
 print(f"Type of add (reg): {type(add_f)}")
 dis.dis(add_f)
 print(f"ADD: {add_f}")
+
+""" Traceback
+You saw in the previous section that, in the context of the lambda function, 
+Python did not provide the name of the function, but only <lambda>. This can be 
+a limitation to consider when an exception occurs, and a traceback shows only 
+<lambda>. """
+
+""" Syntax
+As you saw in the previous sections, a lambda form presents syntactic distinctions 
+from a normal function. In particular, a lambda function has the following 
+characteristics:
+It can only contain expressions and can't include statements in its body.
+It is written as a single line of execution.
+It does not support type annotations.
+It can be immediately invoked (IIFE). """
+
+""" No Statements
+A lambda function can't contain any statements. In a lambda function, 
+statements like return, pass, assert, or raise will raise a SyntaxError 
+exception. """
+
+""" Single Expression
+In contrast to a normal function, a Python lambda function is a single expression. 
+Although, in the body of a lambda, you can spread the expression over several lines 
+using parentheses or a multiline string, it remains a single expression. """
+
+""" Type Annotations
+If you've started adopting type hinting, which is now available in Python, then 
+you have another good reason to prefer normal functions over Python lambda 
+functions. """
+
+""" IIFE
+Immediately Invoked Function Execution. 
+Outside of the Python interpreter, this feature is probably not used in practice. 
+It's a direct consequence of a lambda function being callable as it is defined. 
+For example, this allows you to pass the definition of a Python lambda expression 
+to a higher-order function like map(), filter(), or functools.reduce(), or to a 
+key function. """
