@@ -18,8 +18,8 @@ Python is not inherently a functional language, but it adopted some functional
 concepts early on. In January 1994, map(), filter(), reduce(), and the lambda 
 operator were added to the language. """
 
-""" A lambda expression has three parts: keyword (lambda), a bound variable 
-(as argument) and a body (instructions). """
+# A lambda expression has three parts: keyword (lambda), a bound variable 
+# (as argument) and a body (instructions).
 lambda x: x # identity function
 
 # You can apply the function above to an argument by surrounding the function 
@@ -28,6 +28,10 @@ lambda x: x # identity function
 
 # Because a lambda function is an expression, it can be named:
 sqrt_it = lambda x: x*x
+print(f"8 au carré = {sqrt_it(8)}")
 
-
-
+# Multi-argument functions (functions that take more than one argument) are 
+# expressed in Python lambdas by listing arguments and separating them with 
+# a comma (,) but without surrounding them with parentheses:
+fullname = lambda first, last: f"Full name: {first.title()} {last.title()}"
+print(fullname('Bill', 'Mick'))
